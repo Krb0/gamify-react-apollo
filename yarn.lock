@@ -1839,6 +1839,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource/dancing-script/-/dancing-script-4.5.4.tgz#15f21a64ac9e32c57b5baa23c290188b939230bf"
   integrity sha512-7TfUvCYVCGbVhNzpYS1fJzuQPR0HmgRvE4ZWLxji94P078Sp4wGfQ/w1DpSruWw0Zdt75VvAXHfcxM+P1x3nhw==
 
+"@fontsource/play@^4.5.4":
+  version "4.5.4"
+  resolved "https://registry.yarnpkg.com/@fontsource/play/-/play-4.5.4.tgz#ff502e69464193529040cf1ad75fd3e2d89385cd"
+  integrity sha512-wGXKD9sQyZ7HnVcnDDtJ/ZRQF8jQITOLLOlXe2qP9gMM8p4jUmL2KYoCVvSfRcZ5XSZv8rCFTj3eghwQ/dKN1w==
+
 "@fontsource/playfair-display@^4.5.4":
   version "4.5.4"
   resolved "https://registry.yarnpkg.com/@fontsource/playfair-display/-/playfair-display-4.5.4.tgz#a00b7c02a221f106d707f4257f4723c945b10d44"

@@ -26,6 +26,12 @@ export const FIND_GAME = gql`
       backgroundImage
       description
       rating
+      platforms {
+        platform {
+          name
+          id
+        }
+      }
       id
     }
   }

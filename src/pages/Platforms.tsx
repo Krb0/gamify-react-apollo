@@ -1,36 +1,26 @@
-import { Flex, Stack, chakra } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
+import Loader from "../components/Loader";
+import PlatformList from "../components/Platforms/PlatformList";
 import usePlatforms from "../hooks/usePlatforms";
 
 const Platforms = () => {
-  const [data] = usePlatforms();
+  const { data, loading } = usePlatforms();
   return (
-    <Flex
-      gap="2rem"
-      flexWrap="wrap"
-      justifyContent="center"
-      marginTop="3rem"
-      paddingX="2.5rem"
-    >
-      {data?.platforms.map((platform) => (
-        <Stack
-          alignItems="center"
-          padding="0.5rem 1rem"
-          minWidth="150px"
-          flex="1"
-          textAlign="center"
-          border="1px solid rgba(0,0,0,0.07)"
+    <>
+      {loading ? (
+        <Loader />
+      ) : (
+        <Flex
+          gap="2rem"
+          flexWrap="wrap"
           justifyContent="center"
-          cursor="pointer"
-          transition="0.25s"
-          _hover={{
-            bgColor: "#000",
-            color: "#fff",
-          }}
+          marginTop="3rem"
+          paddingX="2.5rem"
         >
-          <chakra.p>{platform.name} </chakra.p>
-        </Stack>
-      ))}
-    </Flex>
+          <PlatformList platforms={data!.platforms} />
+        </Flex>
+      )}
+    </>
   );
 };
 

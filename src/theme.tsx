@@ -1,6 +1,8 @@
 import { extendTheme } from "@chakra-ui/react";
 import { createBreakpoints } from "@chakra-ui/theme-tools";
-// 2. Update the breakpoints as key-value pairs
+import "@fontsource/rubik";
+import "@fontsource/play";
+
 const breakpoints = createBreakpoints({
   uxs: "300px",
   xs: "420px",
@@ -14,6 +16,7 @@ const breakpoints = createBreakpoints({
 export const fonts = {
   body: "Rubik, sans-serif",
   nav: "Calibri, sans-serif",
+  play: "Play, sans-serif",
 };
 
 const theme = extendTheme({

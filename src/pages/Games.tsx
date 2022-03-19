@@ -1,24 +1,13 @@
 import { Box, chakra, Flex, Image, Link, Stack } from "@chakra-ui/react";
-import useUpcoming from "../hooks/useUpcoming";
 import { Link as RouterLink } from "react-router-dom";
+import useUpcoming from "../hooks/useUpcoming";
+import Loader from "../components/Loader";
 const Games = () => {
   /*   const [data] = useGames();*/
-  const [upcoming, loading] = useUpcoming(12);
+  const [upcoming, loading] = useUpcoming(16);
 
   return loading ? (
-    <Box
-      position="absolute"
-      top="50vh"
-      left="50vw"
-      textAlign="center"
-      transform="translate(-50%,-50%)"
-    >
-      <Image
-        src="https://cdn.shopify.com/s/files/1/0568/8419/9598/t/10/assets/loading.gif?v=12211448342275261349"
-        w="90px"
-        h="90px"
-      />
-    </Box>
+    <Loader />
   ) : (
     <Box>
       <chakra.h3
@@ -37,7 +26,7 @@ const Games = () => {
       >
         Upcoming Games
       </chakra.h3>
-      <Flex flexWrap="wrap" gap="1rem" justifyContent="center" cursor="pointer">
+      <Flex flexWrap="wrap" gap="1rem" justifyContent="center">
         {upcoming?.upcomingGames.map(
           (game: { name: string; backgroundImage: string; id: number }) => (
             <Link as={RouterLink} to={`game/${game.id}`}>

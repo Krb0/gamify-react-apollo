@@ -1,12 +1,17 @@
-import { Platform } from "../platforms/platform.schema";
-
 export interface Game {
   id: number;
   name: string;
-  rating: number;
+  rating: string;
   released: string;
   description: string;
   backgroundImage: string;
   playtime: string;
-  platforms: [Platform];
+  platforms: [GamePlatform];
+}
+
+export interface GamePlatform {
+  platform: {
+    id: number;
+    name: string;
+  };
 }
